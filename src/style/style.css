@@ -1,0 +1,267 @@
+html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    width: 251px;
+    width: fit-content;
+    min-width: 251px;
+    max-width: 100%;
+    height: 200px;
+}
+
+.task-list{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid #e2dfdf;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.23);
+}
+
+.task-list-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid #e2dfdf;
+    padding-left: 1px;
+    box-sizing: border-box;
+    color: #8b8f97;
+}
+
+.task-list-item:last-child{
+    border-bottom: none;
+}
+
+.new {
+    height: 35.5px;
+    background-color: #f3f3f3;
+    color: #c0c6d2;
+}
+
+.checkbox-container{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #f2e3df;
+    box-sizing: border-box;
+    margin-right: -3px;
+    z-index: 1;
+}
+
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input[type=checkbox].task-list-item-checkbox {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+  
+input[type=checkbox].task-list-item-checkbox + label.checkbox-label {
+    padding-left:15px;
+    height:15px; 
+    display:inline-block;
+    line-height:15px;
+    background-image:url(../img/icon/checkmark.png);
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+    border: 1px solid #6bb3ca;
+    border-radius: 1px;
+}
+
+input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
+    background-position: 0 -15px;
+    border: 1px solid #d6d6d6;
+}
+
+.task-list-item-text{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: max-content;
+    border-left: 1px solid #f2e3df;
+    padding-left: 14px;
+    margin-left: -2px;
+    padding-bottom: 4.3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    word-spacing: 1.2px;
+    overflow: hidden;
+}
+
+.task-list-item-input{
+    display: flex;
+    align-items: center;
+    height: 95%;
+    width: 78%;
+    border: none;
+    border-top: 1px solid #e2dfdf;
+    border-bottom: 1px solid #e2dfdf;
+    border-left: 1px solid #f2e3df;
+    padding-left: 14px;
+    margin-left: -2px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    word-spacing: 1.2px;
+    outline: none;
+    background-color: #f3f3f3;
+    color:  #8b8f97;
+}
+
+.task-list-item-input::placeholder{
+    color:  #c0c6d2;
+}
+
+.delete-btn {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 17px;
+    height: 17px;
+    padding: 6px;
+    border: 1px solid #e2dfdf;
+    z-index: 1;
+}
+
+.task-list-item:hover > .delete-btn{
+    display: block;
+}
+
+.modal{
+    position: absolute;
+    right: -250px;
+    width: 250px;
+    height: 125px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    border: 1px solid #8a8a8a;
+    border-radius: 10px;
+}
+
+.modal-message-hi{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color:  #000000;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.modal-message-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color:  #000000;
+    text-align: center;
+    margin: 0;
+}
+
+.animShow{
+    animation: fromRight 2s ease-in-out;
+}
+
+.animHide{
+    animation: toTop 2s ease-in-out;
+}
+
+@keyframes fromRight{
+    0%{
+        right: -250px;
+        opacity: 0;
+    }
+    100%{
+        right: 5px;
+        opacity: 1;
+    }
+}
+
+@keyframes toTop{
+    0%{
+        top: 5px;
+        opacity: 1;
+    }
+    100%{
+        top: -125px;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .container{
+        width: 100%;
+    }
+    .delete-btn{
+        right: 0;
+    }
+    .modal{
+        width: 100%;
+        bottom: 0;
+        border-radius: 3px;
+    }
+    .modal-message-text{
+        margin: 0 20px;
+    }
+    .animShow{
+        animation: fromBottom 2s ease-in-out;
+    }
+    
+    .animHide{
+        animation: toBottom 2s ease-in-out;
+    }
+    
+    @keyframes fromBottom{
+        0%{
+            bottom: -150px;
+            opacity: 0;
+        }
+        100%{
+            bottom: 5px;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes toBottom{
+        0%{
+            bottom: 5px;
+            opacity: 1;
+        }
+        100%{
+            bottom: -150px;
+            opacity: 0;
+        }
+    }
+}
