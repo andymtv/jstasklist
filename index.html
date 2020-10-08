@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-List-Plugin</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CONTAINER START -->
+    <div class="container">
+        <!-- TASK-LIST START -->
+        <ul class="task-list">
+            <li class="task-list-item new">
+                <div class="checkbox-container">
+                    <input type="checkbox"  id="checkbox1" class="task-list-item-checkbox">
+                    <label for="checkbox1" class="checkbox-label"></label>
+                </div>
+                <input class="task-list-item-input" placeholder="Enter new task here..."></input>
+            </li>
+            <li class="task-list-item">
+                <div class="checkbox-container">
+                    <input type="checkbox"  id="checkbox2" class="task-list-item-checkbox">
+                    <label for="checkbox2" class="checkbox-label"></label>
+                </div>
+                <span class="task-list-item-text" id="taskText2">Play soccer with friends</span>
+                <img class="delete-btn" src="src/img/icon/delete.png">
+            </li>
+            <li class="task-list-item">
+                <div class="checkbox-container">
+                    <input type="checkbox"  id="checkbox3" class="task-list-item-checkbox" checked="checked">
+                    <label for="checkbox3" class="checkbox-label"></label>
+                </div>
+                <span class="task-list-item-text" id="taskText3">Open Photoshop</span>
+                <img class="delete-btn" src="src/img/icon/delete.png">
+            </li>
+            <li class="task-list-item">
+                <div class="checkbox-container">
+                    <input type="checkbox"  id="checkbox4" class="task-list-item-checkbox">
+                    <label for="checkbox4" class="checkbox-label"></label>
+                </div>
+                <span class="task-list-item-text" id="taskText4">Finish client work</span>
+                <img class="delete-btn" src="src/img/icon/delete.png">
+            </li>
+            <li class="task-list-item">
+                <div class="checkbox-container">
+                    <input type="checkbox"  id="checkbox5" class="task-list-item-checkbox" checked="checked">
+                    <label for="checkbox5" class="checkbox-label"></label>
+                </div>
+                <span class="task-list-item-text" id="taskText5">Give away some PSDs</span>
+                <img class="delete-btn" src="src/img/icon/delete.png">
+            </li>
+            <li class="task-list-item">
+                <div class="checkbox-container">
+                    <input type="checkbox"  id="checkbox6" class="task-list-item-checkbox">
+                    <label for="checkbox6" class="checkbox-label"></label>
+                </div>
+                <span class="task-list-item-text" id="taskText6">Post a new shot to Dribbble</span>
+                <img class="delete-btn" src="src/img/icon/delete.png">
+            </li>
+        </ul>
+        <!-- TASK-LIST END -->
+    </div>
+    <!-- CONTAINER END -->
+
+    <!-- MODAL START -->
+    <div class="modal">
+        <p class="modal-message-hi">Hi, User!</p>
+        <p class="modal-message-text">If you want the program to work correctly, remove all items from the list and add them manually again</p>
+    </div>
+    <!-- MODAL END -->
+
+<script src="src/js/script.js"></script>
+</body>
+</html>
