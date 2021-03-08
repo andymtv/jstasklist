@@ -261,7 +261,7 @@ function modalFromRightToTop(){
     setTimeout(() => {
         modal.classList.add('animShow');
         modal.style.display = 'flex';
-        modal.style.right = '5px';
+        modal.style.right = '2rem';
         setTimeout(() => {
             modal.classList.remove('animShow');
             modal.classList.add('animHide');
@@ -289,12 +289,12 @@ function modalFromBottomToBottom(){
 }
 
 window.addEventListener('load', () => {
-    if(window.matchMedia("(max-width: 900px)").matches){
+    if(window.matchMedia("(max-width: 1100px)").matches){
         modalFromBottomToBottom();
         modal.style.right = '0';
     } else {
         modalFromRightToTop();
-        modal.style.top = '5px';
+        modal.style.top = '2rem';
     }
 });
 });

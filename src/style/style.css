@@ -1,5 +1,5 @@
 html{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
 }
@@ -16,24 +16,29 @@ body{
     width: 100%;
     min-width: 251px;
     max-width: 100%;
-    height: fit-content;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: scroll;
 }
 
 .header {
-    width: 50%;
-    height: fit-content;
-    margin: 10px;
+    position: fixed;
+    padding-top: 0.5rem;
+    width: 50.1%;
+    height: 4rem;
+    z-index: 1000;
+    background: #fff;
 }
 
 .title {
     width: 100%;
-    height: inherit;
+    height: 100%;
     display: flex;
     background-color: rgb(214, 47, 47);
     border-radius: 5px;
+    box-shadow: 0px 4px 12px 1px rgba(0,0,0,0.30);
 }
 
 .title-text {
@@ -53,9 +58,10 @@ body{
 }
 
 .task-list{
+    position: relative;
     width: 50%;
     height: fit-content;
-    margin: 0;
+    margin: 5rem 0 0 0 ;
     padding: 0;
     list-style-type: none;
     border: 1px solid #e2dfdf;
@@ -177,14 +183,15 @@ input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
 
 .delete-btn {
     display: none;
-    margin: 0 auto;
+    margin: 0;
     position: absolute;
-    top: 0;
-    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 3px;
     width: 17px;
     height: 17px;
     padding: 6px;
-    border: 1px solid #e2dfdf;
+    border: 1px solid rgb(255, 136, 136);
     z-index: 1;
 }
 
@@ -204,6 +211,7 @@ input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
     background-color: #f7f7f7;
     border: 1px solid #8a8a8a;
     border-radius: 10px;
+    z-index: 2000;
 }
 
 .modal-message-hi{
@@ -236,14 +244,14 @@ input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
         opacity: 0;
     }
     100%{
-        right: 5px;
+        right: 2rem;
         opacity: 1;
     }
 }
 
 @keyframes toTop{
     0%{
-        top: 5px;
+        top: 2rem;
         opacity: 1;
     }
     100%{
@@ -252,15 +260,33 @@ input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
+
     .container{
         width: 100%;
     }
+
+    .header {
+        width: 94%;
+    }
+
+    .task-list {
+        width: 96%;
+    }
+
+    .title-text {
+        font-size: 28px;
+    }
+
+    .title-text span {
+        font-size: 18px;
+    }
+
     .delete-btn{
         right: 0;
     }
     .modal{
-        width: 100%;
+        width: 98%;
         bottom: 0;
         border-radius: 3px;
     }
