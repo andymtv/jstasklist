@@ -13,19 +13,53 @@ body{
 
 .container{
     position: relative;
-    width: 251px;
-    width: fit-content;
+    width: 100%;
     min-width: 251px;
     max-width: 100%;
-    height: 200px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 50%;
+    height: fit-content;
+    margin: 10px;
+}
+
+.title {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    background-color: rgb(214, 47, 47);
+    border-radius: 5px;
+}
+
+.title-text {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    font-family: 'Bangers', cursive;
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: #fff;
+} 
+
+.title-text span {
+    margin-left: 24px;
+    font-size: 24px;
 }
 
 .task-list{
-    width: 100%;
+    width: 50%;
+    height: fit-content;
     margin: 0;
     padding: 0;
     list-style-type: none;
     border: 1px solid #e2dfdf;
+    border-radius: 5px;
     box-sizing: border-box;
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.23);
 }
@@ -36,7 +70,7 @@ body{
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 31px;
+    height: 40px;
     border-bottom: 1px solid #e2dfdf;
     padding-left: 1px;
     box-sizing: border-box;
@@ -48,9 +82,8 @@ body{
 }
 
 .new {
-    height: 35.5px;
+    height: 45px;
     background-color: #f3f3f3;
-    color: #c0c6d2;
 }
 
 .checkbox-container{
@@ -96,7 +129,7 @@ input[type=checkbox].task-list-item-checkbox + label.checkbox-label {
     font-size:15px;
     vertical-align:middle;
     cursor:pointer;
-    border: 1px solid #6bb3ca;
+    border: 1px solid rgb(255, 136, 136);
     border-radius: 1px;
 }
 
@@ -113,9 +146,8 @@ input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
     border-left: 1px solid #f2e3df;
     padding-left: 14px;
     margin-left: -2px;
-    padding-bottom: 4.3px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     word-spacing: 1.2px;
     overflow: hidden;
 }
@@ -132,15 +164,15 @@ input[type=checkbox].task-list-item-checkbox:checked + label.checkbox-label {
     padding-left: 14px;
     margin-left: -2px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     word-spacing: 1.2px;
     outline: none;
     background-color: #f3f3f3;
-    color:  #8b8f97;
+    color:  #7c7c7c;
 }
 
 .task-list-item-input::placeholder{
-    color:  #c0c6d2;
+    color:  #a1a1a1;
 }
 
 .delete-btn {

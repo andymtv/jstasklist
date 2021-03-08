@@ -1,0 +1,19 @@
+{
+  "name": "jstasklist",
+  "version": "1.0.0",
+  "description": "Task List App based on Vanilla JavaScript",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andymtv/jstasklist.git"
+  },
+  "author": "andymtv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andymtv/jstasklist/issues"
+  },
+  "homepage": "https://github.com/andymtv/jstasklist#readme"
+}

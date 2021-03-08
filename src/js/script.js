@@ -79,7 +79,7 @@ window.addEventListener('load', () => {
 
 //  Clear a placeholder when input has focus 
 
-taskTextInput.addEventListener('focuson', () => {
+taskTextInput.addEventListener('focus', () => {
     taskTextInput.setAttribute('placeholder', '');
 })
 
@@ -145,6 +145,8 @@ taskTextInput.addEventListener('focusout', () => {
 
     taskTextInput.value = '';
     taskTextInput.setAttribute('placeholder', 'Enter new task here...');
+    } else {
+        taskTextInput.setAttribute('placeholder', 'Enter new task here...');
     }
 })    
 

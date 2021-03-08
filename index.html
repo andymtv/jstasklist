@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task-List-Plugin</title>
-    <link rel="stylesheet" href="src/style/style.css">
+    <title>Taskify</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/style.css">
 </head>
 <body>
     <!-- CONTAINER START -->
     <div class="container">
+        <div class="header">
+            <div class="title">
+                <p class="title-text">Taskify : 
+                    <span>Pss... Do you have some tasks?</span>
+                </p>
+            </div>
+        </div>
         <!-- TASK-LIST START -->
         <ul class="task-list">
             <li class="task-list-item new">
@@ -27,7 +36,7 @@
                 <span class="task-list-item-text" id="taskText2">Play soccer with friends</span>
                 <img class="delete-btn" src="src/img/icon/delete.png">
             </li>
-            <li class="task-list-item">
+            <li class="task-list-item" style="text-decoration: line-through;">
                 <div class="checkbox-container">
                     <input type="checkbox"  id="checkbox3" class="task-list-item-checkbox" checked="checked">
                     <label for="checkbox3" class="checkbox-label"></label>
@@ -43,7 +52,7 @@
                 <span class="task-list-item-text" id="taskText4">Finish client work</span>
                 <img class="delete-btn" src="src/img/icon/delete.png">
             </li>
-            <li class="task-list-item">
+            <li class="task-list-item" style="text-decoration: line-through;">
                 <div class="checkbox-container">
                     <input type="checkbox"  id="checkbox5" class="task-list-item-checkbox" checked="checked">
                     <label for="checkbox5" class="checkbox-label"></label>
